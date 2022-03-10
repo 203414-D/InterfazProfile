@@ -18,15 +18,12 @@ const Register = (props) => {
     const post = (url)=>{
 
         axios.post(url, {'username':username,'password':password,'password2':password2,'email':email,'first_name':first_name,'last_name':last_name}).then(response=>{
+            alert("usuario registrado correctamente")
              console.log(response.data)
         },{
             headers:{
                 'Content-Type' : 'application/json',
                 'Accept' : 'application/json',}
-        })
-        .then((response)=>{
-            console.log(response.data.token)
-            alert("usuario registrado correctamente")
         })
         .catch((error)=>{
             console.log(error.response.data.password[0]);
@@ -57,7 +54,6 @@ const Register = (props) => {
             <input type="text" name="last_name" onChange={e=>setLastName(e.target.value)}/>
             </label>
             <button onClick={()=>{
-                console.log('funcionando')
                 post(url_register)
             }}>Registrarse</button>
             <Link id="Link-Style"to="/login">logearse</Link>
