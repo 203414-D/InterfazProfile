@@ -20,6 +20,7 @@ const Register = (props) => {
         axios.post(url, {'username':username,'password':password,'password2':password2,'email':email,'first_name':first_name,'last_name':last_name}).then(response=>{
             alert("usuario registrado correctamente")
              console.log(response.data)
+             window.location="/login"
         },{
             headers:{
                 'Content-Type' : 'application/json',
@@ -41,7 +42,7 @@ const Register = (props) => {
             <label>password:
             <input type="password"name="password" onChange={e=>setpassword(e.target.value)}/>
             </label>
-            <label>password2:
+            <label>repeat password:
             <input type="password"name="password2" onChange={e=>setpassword2(e.target.value)}/>
             </label>
             <label>email:

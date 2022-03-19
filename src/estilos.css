@@ -107,3 +107,6 @@ button:hover{
 #Link-Style:hover{
     color: #4c85db;
 }
+.modificarB{
+    transform: translateX(10%);
+}
