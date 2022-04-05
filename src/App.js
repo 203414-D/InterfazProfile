@@ -2,7 +2,7 @@ import Login from './Login';
 import './estilos.css';
 import Register from './Register';
 import UserProfile from './UserProfile';
-import {BrowserRouter, Switch, Routes,Route} from 'react-router-dom'
+import {BrowserRouter, Routes,Route} from 'react-router-dom'
 
 function App() {
   return (

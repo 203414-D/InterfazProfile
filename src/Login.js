@@ -1,4 +1,4 @@
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import axios from 'axios';
 import { Link } from "react-router-dom";
 
@@ -22,7 +22,6 @@ const Login = (props) => {
             localStorage.setItem('last_name', response.data.last_name);
             localStorage.setItem('email', response.data.email);
             localStorage.setItem('username', username)
-            var clave = localStorage.getItem('token')
             console.log(localStorage)
             alert("inicio de sesion exitoso")
             window.location="/profile/"+localStorage.getItem('userid')
